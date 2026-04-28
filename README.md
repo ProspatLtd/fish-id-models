@@ -1,6 +1,4 @@
-# Fishy Model Weights
-
-Pretrained ML model weights for the [Fishy](https://github.com/ProspatLtd/Fishy) Android app. Released here so the app can download them on demand instead of bundling half a gigabyte in the APK.
+# Fish Id Model Weights
 
 **No application code lives in this repo.** Only the model files.
 
@@ -10,14 +8,14 @@ All files are attached to the [v1.0 release](https://github.com/ProspatLtd/Fishy
 
 | File | Size | Architecture | Source |
 |------|------|-------------|--------|
-| `fish_detector.ptl` | 78 MB | YOLO v26 nano (TorchScript Lite) | [Fishial.AI](https://github.com/fishial/fish-identification) |
-| `fish_segmenter.ptl` | 50 MB | FPN + ResNet18 (TorchScript Lite) | [Fishial.AI](https://github.com/fishial/fish-identification) |
-| `fish_classifier.ptl` | 108 MB | ConvNeXt Tiny v7.1 (TorchScript Lite) | [Fishial.AI](https://github.com/fishial/fish-identification) |
-| `fish_classifier_bioclip.ptl` | 329 MB | BioCLIP ViT-B/16 (TorchScript Lite) | [Imageomics/bioclip](https://github.com/Imageomics/bioclip) |
+| `fish_detector.pte` | 78 MB | YOLO v26 nano (TorchScript Lite) | [Fishial.AI](https://github.com/fishial/fish-identification) |
+| `fish_segmenter.pte` | 50 MB | FPN + ResNet18 (TorchScript Lite) | [Fishial.AI](https://github.com/fishial/fish-identification) |
+| `fish_classifier.pte` | 108 MB | ConvNeXt Tiny v7.1 (TorchScript Lite) | [Fishial.AI](https://github.com/fishial/fish-identification) |
+| `fish_classifier_bioclip.pte` | 329 MB | BioCLIP ViT-B/16 (TorchScript Lite) | [Imageomics/bioclip](https://github.com/Imageomics/bioclip) |
 
 ## How they got here
 
-The Fishial and BioCLIP projects publish the source weights under MIT. We converted them to PyTorch Lite Interpreter format (`.ptl`) so they can run on Android via `pytorch_android_lite`. Details of the conversion pipeline are in the main [Fishy README](https://github.com/ProspatLtd/Fishy).
+The Fishial and BioCLIP projects publish the source weights under MIT. We converted them to PyTorch Lite Interpreter format (`.pte`) so they can run on Android via `pytorch_android_lite`. Details of the conversion pipeline are in the main [Fishy README](https://github.com/ProspatLtd/Fishy).
 
 ## License
 
