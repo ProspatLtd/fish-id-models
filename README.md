@@ -1,19 +1,23 @@
-# Fish Id Model Weights
+# Fish ID Model Weights
+
+Pretrained ML model weights for Fish recognition.
 
 **No application code lives in this repo.** Only the model files.
 
 ## Files
 
-| File | Size | Architecture | Source |
-|------|------|-------------|--------|
-| `fish_detector.pte` | 78 MB | YOLO v26 nano (TorchScript Lite) | [Fishial.AI](https://github.com/fishial/fish-identification) |
-| `fish_segmenter.pte` | 50 MB | FPN + ResNet18 (TorchScript Lite) | [Fishial.AI](https://github.com/fishial/fish-identification) |
-| `fish_classifier.pte` | 108 MB | ConvNeXt Tiny v7.1 (TorchScript Lite) | [Fishial.AI](https://github.com/fishial/fish-identification) |
-| `fish_classifier_bioclip.pte` | 329 MB | BioCLIP ViT-B/16 (TorchScript Lite) | [Imageomics/bioclip](https://github.com/Imageomics/bioclip) |
+All files are tracked in this repository with Git LFS:
+
+| File | Size | Architecture | Runtime | Source |
+|------|------|-------------|---------|--------|
+| `fish_detector.pte` | 78 MB | YOLO v26 nano | ExecuTorch | [Fishial.AI](https://github.com/fishial/fish-identification) |
+| `fish_segmenter.pte` | 50 MB | FPN + ResNet18 | ExecuTorch | [Fishial.AI](https://github.com/fishial/fish-identification) |
+| `fish_classifier.pte` | 108 MB | ConvNeXt Tiny v7.1 | ExecuTorch | [Fishial.AI](https://github.com/fishial/fish-identification) |
+| `fish_classifier_bioclip.pte` | 329 MB | BioCLIP ViT-B/16 | ExecuTorch | [Imageomics/bioclip](https://github.com/Imageomics/bioclip) |
 
 ## How they got here
 
-The Fishial and BioCLIP projects publish the source weights under MIT. We converted them to PyTorch Lite Interpreter format (`.pte`) so they can run on Android via `pytorch_android_lite`. Details of the conversion pipeline are in the main [Fishy README](https://github.com/ProspatLtd/Fishy).
+The Fishial and BioCLIP projects publish the source weights under MIT. We converted them to ExecuTorch `.pte` flatbuffer format so they can run on Android via the ExecuTorch runtime.
 
 ## License
 
