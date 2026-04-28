@@ -4,8 +4,6 @@
 
 ## Files
 
-All files are attached to the [v1.0 release](https://github.com/ProspatLtd/Fishy-models/releases/tag/v1.0):
-
 | File | Size | Architecture | Source |
 |------|------|-------------|--------|
 | `fish_detector.pte` | 78 MB | YOLO v26 nano (TorchScript Lite) | [Fishial.AI](https://github.com/fishial/fish-identification) |
